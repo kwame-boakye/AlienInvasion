@@ -10,7 +10,7 @@ class Ship:
 
         # Load the ship image and get its rect
         self.image = pygame.image.load('images/ship.bmp')
-        self.image = pygame.transform.scale(self.image, (95, 95))
+        self.image = pygame.transform.scale(self.image, (65, 65))
         self.rect = self.image.get_rect()
 
         #Start each new ship at the bottom center of the screen
@@ -41,5 +41,5 @@ class Ship:
 
     def center_ship(self):
         """Center the ship on the screen."""
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.midbottom = self.screen.get_rect().midbottom
         self.x = float(self.rect.x)
